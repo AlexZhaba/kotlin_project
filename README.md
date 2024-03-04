@@ -8,7 +8,7 @@ Which technology and techniques was used:
 - Sharing data between two activities: intents, Parcelable, event listener
 
 Video:
-[video_app.mov](./docs/video_app.mov)
+[video_app.mov](./docs/app_gif.gif)
 
 Screenshot:
 
