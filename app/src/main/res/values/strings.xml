@@ -24,6 +24,8 @@
 
     <string name="shop_name">Vague</string>
     <string name="bottom_name">Basket: 899 R</string>
+    <string name="search_button">Open</string>
+    <string name="tel_button">Call</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
