@@ -9,7 +9,7 @@ Which technology and techniques was used:
 
 Video:
 
-![video_app.mov](./docs/app_gif.gif)
+![video_app.mov](./docs/app_gif_1.gif)
 
 Screenshot:
 
