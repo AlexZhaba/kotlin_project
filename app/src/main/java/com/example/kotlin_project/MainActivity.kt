@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Button
@@ -56,6 +57,20 @@ class MainActivity : AppCompatActivity(), SearchListener {
         setPhoneListener()
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(FILTER_KEY, productFilterString)
+    }
+
+    override fun onRestoreInstanceState(
+        savedInstanceState: Bundle,
+    ) {
+        super.onRestoreInstanceState(savedInstanceState)
+        productFilterString = savedInstanceState.getString(FILTER_KEY)!!
+        setProductAdapter()
+
+    }
+
     private fun getFilteredProducts(): ArrayList<Product> {
         return ArrayList(productsListView
             .filter { it.title.contains(productFilterString, ignoreCase = true) })
@@ -106,4 +121,7 @@ class MainActivity : AppCompatActivity(), SearchListener {
         }
     }
 
+    companion object {
+        const val FILTER_KEY = "FILTER_KEY"
+    }
 }
